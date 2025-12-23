@@ -1,60 +1,56 @@
-* {
-    margin: 0; padding: 0; box-sizing: border-box;
+:root {
+    --primary: #d4a373;
+    --bg: #fefae0;
 }
 
 body {
     font-family: 'Work Sans', sans-serif;
-    color: #444;
+    background-color: var(--bg);
+    margin: 0;
 }
 
+/* Background Cover Full Screen */
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center;
+    width: 100%;
+    height: 100vh; /* Mengisi seluruh layar HP */
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000');
     background-size: cover;
+    background-position: center;
     color: white;
+    position: relative;
+}
+
+/* Overlay agar teks mudah dibaca */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero .content {
+    z-index: 1; /* Supaya teks di atas overlay */
+    padding: 20px;
 }
 
 h1 {
     font-family: 'Sacramento', cursive;
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin: 10px 0;
 }
 
 .btn {
-    padding: 12px 25px;
-    background: #d4a373;
+    padding: 10px 25px;
+    background: var(--primary);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #bc8a5f;
-}
-
-.mempelai {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #fefae0;
-}
-
-.couple {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.ampersand {
-    font-family: 'Sacramento', cursive;
-    font-size: 4rem;
-    color: #d4a373;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
