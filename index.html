@@ -50,9 +50,12 @@
         AOS.init();
         
         function bukaUndangan() {
-            const song = document.getElementById('song');
-            song.play(); // Memutar musik saat tombol ditekan
-            document.getElementById('mempelai').scrollIntoView({ behavior: 'smooth' });
+          // 1. Putar Musik
+          const song = document.getElementById('song');
+          song.play();
+          // 2. Scroll halus ke bagian Mempelai
+          const element = document.getElementById("mempelai");
+          element.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
