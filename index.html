@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Yuli & Rizal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="hero" class="hero">
+        <div class="content" data-aos="fade-up" data-aos-duration="2000">
+            <h4>The Wedding of</h4>
+            <h1>Yuli & Rizal</h1>
+            <p>Akan segera melangsungkan resepsi pernikahan dalam:</p>
+            <div id="countdown"></div>
+            <button onclick="bukaUndangan()" class="btn">Buka Undangan</button>
+        </div>
+    </section>
+
+    <section id="mempelai" class="mempelai">
+        <div class="container">
+            <div data-aos="zoom-in">
+                <h2>Assalamu’alaikum Wr. Wb.</h2>
+                <p>Dengan memohon rahmat Allah SWT, kami mengundang Bapak/Ibu/Saudara/i ke pernikahan kami.</p>
+            </div>
+            
+            <div class="couple">
+                <div class="pria" data-aos="fade-right">
+                    <h3>Rizal, S.Kom</h3>
+                    <p>Putra dari Bpk. Fulan & Ibu Fulanah</p>
+                </div>
+                <span class="ampersand">&</span>
+                <div class="wanita" data-aos="fade-left">
+                    <h3>Yuli, S.Pd</h3>
+                    <p>Putri dari Bpk. Fulan & Ibu Fulanah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <audio id="song" loop>
+        <source src="link-lagu-anda.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        function bukaUndangan() {
+            const song = document.getElementById('song');
+            song.play(); // Memutar musik saat tombol ditekan
+            document.getElementById('mempelai').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
